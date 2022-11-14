@@ -27,7 +27,7 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            debuggable false
+//            debuggable false
         }
     }
     compileOptions {
@@ -56,4 +56,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$google_nav"
+    implementation "androidx.navigation:navigation-ui-ktx:$google_nav"
 }
