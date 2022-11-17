@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Cek Keaslian KTP</string>
+    <string name="no_ktp">KTP Number</string>
+    <string name="delimeter">:</string>
+    <string name="provinsi">Province</string>
+    <string name="kabkot">City</string>
+    <string name="kecamatan">District</string>
+    <string name="kode_pos">Postal Code</string>
+    <string name="tanggal_lahir">Birthdate</string>
+    <string name="jenis_kelamin">Sex</string>
+    <string name="usia">Age</string>
+    <string name="ulang_tahun">Birthday</string>
+    <string name="zodiak">Zodiac</string>
+    <string name="shio">Shio</string>
+    <string name="status">status</string>
+    <string name="cari">Search</string>
+    <string name="masukkan_nomor_ktp">Input Your KTP Number</string>
+    <string name="Code">Code</string>
+    <string name="valid">Valid</string>
+    <string name="invalid">Invalid</string>
 </resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cek Keaslian KTP</string>
+    <string name="no_ktp">No Ktp</string>
+    <string name="delimeter">:</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="kabkot">Kabupaten/Kota</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="kode_pos">Kode Pos</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="usia">Usia</string>
+    <string name="ulang_tahun">Ulang Tahun</string>
+    <string name="zodiak">Zodiak</string>
+    <string name="shio">Shio</string>
+    <string name="status">status</string>
+    <string name="cari">Cari</string>
+    <string name="masukkan_nomor_ktp">Masukkan Nomor KTP</string>
+    <string name="Code">Code</string>
+    <string name="valid">Valid</string>
+</resources>
