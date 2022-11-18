@@ -9,6 +9,5 @@ APK untuk cek keaslian KTP dan menunjukan informasi berdasarkan NIK KTP.
 ![4](https://user-images.githubusercontent.com/41590940/202644741-ad70ad63-392f-45da-a70e-6da67f79f521.png)
 
 
-Made with love with
 
 [![My Skills](https://skills.thijs.gg/icons?i=kotlin&theme=dark)](https://skills.thijs.gg)
