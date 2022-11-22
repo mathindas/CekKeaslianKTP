@@ -1,6 +1,7 @@
 # CekKeaslianKTP
 APK untuk cek keaslian KTP dan menunjukan informasi berdasarkan NIK KTP.
-[Download from PlayStore](https://play.google.com/store/apps/details?id=com.rivaldo.cekkeaslianktp)
+
+<a href='https://play.google.com/store/apps/details?id=com.rivaldo.cekkeaslianktp'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="170px"/></a>
 
 # Rumus
 ![nomor_induk_kependudukan](https://user-images.githubusercontent.com/41590940/202644369-3667a95b-eb71-48a5-82dc-09a1c4620a48.jpg)
