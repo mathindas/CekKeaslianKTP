@@ -1,8 +1,10 @@
 package com.rivaldo.cekkeaslianktp
 
-import android.graphics.Color
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
+import android.view.inputmethod.EditorInfo
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.rivaldo.cekkeaslianktp.databinding.ActivityMainBinding
@@ -12,25 +14,46 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
 
-    @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        window.sharedElementEnterTransition.duration = 500
 
-        binding.btnSearch.setOnClickListener {
-            binding.ivStatus.visibility = View.VISIBLE
-            binding.tvValid.visibility = View.VISIBLE
-            if (getInfo()) {
-                binding.tlView.visibility = View.VISIBLE
-                binding.ivStatus.setImageResource(R.drawable.ic_baseline_check_circle_24)
-                binding.tvValid.text = getString(R.string.valid)
-                binding.tvValid.setTextColor(resources.getColor(R.color.green))
-            }else{
-                binding.tlView.visibility = View.GONE
-                binding.ivStatus.setImageResource(R.drawable.ic_round_error_24)
-                binding.tvValid.text = getString(R.string.invalid)
-                binding.tvValid.setTextColor(resources.getColor(R.color.red))
+        binding.etKtp.setText(intent.extras?.get(EXTRAS_TEXT).toString())
+        updateView()
+
+        binding.filledTextField.setEndIconOnClickListener { updateView() }
+        binding.etKtp.setOnEditorActionListener(object : TextView.OnEditorActionListener {
+            override fun onEditorAction(v: TextView?, actionId: Int, event: KeyEvent?): Boolean {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    updateView()
+                    return true
+                }
+                return false
+            }
+        })
+    }
+
+    private fun updateView(){
+        binding.animationView.visibility = View.VISIBLE
+        if (getInfo()) {
+            binding.apply {
+                tlView.visibility = View.VISIBLE
+                llView.visibility = View.GONE
+                animationView.setAnimation(R.raw.success)
+                animationView.playAnimation()
+                tvStatus.text = getString(R.string.valid)
+                tvStatus.setTextColor(baseContext.getColor(R.color.green))
+            }
+        }else{
+            binding.apply {
+                tlView.visibility = View.GONE
+                llView.visibility = View.VISIBLE
+                animationView.setAnimation(R.raw.error)
+                animationView.playAnimation()
+                tvStatus.text = getString(R.string.invalid)
+                tvStatus.setTextColor(baseContext.getColor(R.color.red))
             }
         }
     }
@@ -93,5 +116,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         return isValid
+    }
+
+    companion object{
+        const val EXTRAS_TEXT = "EXTRASTEXT"
     }
 }

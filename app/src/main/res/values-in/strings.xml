@@ -13,9 +13,11 @@
     <string name="ulang_tahun">Ulang Tahun</string>
     <string name="zodiak">Zodiak</string>
     <string name="shio">Shio</string>
-    <string name="status">status</string>
+    <string name="status">Status</string>
     <string name="cari">Cari</string>
     <string name="masukkan_nomor_ktp">Masukkan Nomor KTP</string>
     <string name="Code">Code</string>
     <string name="valid">Valid</string>
+    <string name="invalid">Invalid</string>
+    <string name="ktp_invalid">Nomor KTP yang anda masukkan tidak terdaftar</string>
 </resources>

@@ -4,35 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/background"
     tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/margin_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/success" />
+
+    <LinearLayout
+        android:id="@+id/llStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animationView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textSize="@dimen/text_big"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:text="@string/delimeter"
+            android:textSize="@dimen/text_big"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_big"
+            android:textStyle="bold"
+            tools:text="Valid" />
+
+    </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/filledTextField"
+        android:transitionName="tnEdittext"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_very_big"
         android:hint="@string/masukkan_nomor_ktp"
-        android:layout_margin="20dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_rounded_arrow_rotate"
+        app:endIconTint="@color/color2"
+        app:boxBackgroundColor="@color/transparentWhite"
+        android:elevation="@dimen/margin_small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/llStatus">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etKtp"
+            android:maxLines="1"
+            android:imeOptions="actionSearch"
+            android:inputType="number"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSearch"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cari"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filledTextField" />
 
     <TableLayout
         android:id="@+id/tlView"
@@ -40,13 +87,12 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_corner_background"
         android:padding="@dimen/padding"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginEnd="@dimen/margin_normal"
-        android:layout_marginTop="120dp"
+        android:layout_margin="@dimen/margin_very_big"
         android:visibility="gone"
+        android:elevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSearch">
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField">
 
         <TableRow
             android:layout_width="match_parent"
@@ -385,28 +431,26 @@
 
     </TableLayout>
 
-    <TextView
-        android:id="@+id/tvValid"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/llView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="20sp"
+        android:background="@drawable/rounded_corner_background"
+        android:padding="@dimen/padding"
+        android:layout_margin="@dimen/margin_very_big"
         android:visibility="gone"
-        android:layout_marginTop="@dimen/margin_big"
+        android:elevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSearch"
-        tools:text="Valid" />
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField">
 
-    <ImageView
-        android:id="@+id/ivStatus"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:contentDescription="@string/status"
-        android:src="@drawable/ic_round_error_24"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvValid" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/ktp_invalid"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

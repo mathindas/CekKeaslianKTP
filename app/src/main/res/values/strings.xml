@@ -12,10 +12,11 @@
     <string name="ulang_tahun">Birthday</string>
     <string name="zodiak">Zodiac</string>
     <string name="shio">Shio</string>
-    <string name="status">status</string>
+    <string name="status">Status</string>
     <string name="cari">Search</string>
     <string name="masukkan_nomor_ktp">Input Your KTP Number</string>
     <string name="Code">Code</string>
     <string name="valid">Valid</string>
     <string name="invalid">Invalid</string>
+    <string name="ktp_invalid">The KTP number you entered is not registered</string>
 </resources>

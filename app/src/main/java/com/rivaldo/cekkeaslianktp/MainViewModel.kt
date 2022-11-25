@@ -2,7 +2,7 @@ package com.rivaldo.cekkeaslianktp
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
-import com.rivaldo.cekkeaslianktp.Utils.toMap
+import com.rivaldo.cekkeaslianktp.Utils.Companion.toMap
 import org.json.JSONObject
 import java.time.LocalDate
 import java.time.Period

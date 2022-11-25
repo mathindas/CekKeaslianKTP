@@ -7,4 +7,5 @@ plugins {
 
 ext{
     google_nav = '2.5.3'
+    lottie = '5.0.2'
 }
