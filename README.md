@@ -7,8 +7,12 @@ APK untuk cek keaslian KTP dan menunjukan informasi berdasarkan NIK KTP.
 ![nomor_induk_kependudukan](https://user-images.githubusercontent.com/41590940/202644369-3667a95b-eb71-48a5-82dc-09a1c4620a48.jpg)
 
 # Screenshots
-![2](https://user-images.githubusercontent.com/41590940/202644730-26085861-96ad-457c-b1de-fbf0f7ad13eb.png)
-![4](https://user-images.githubusercontent.com/41590940/202644741-ad70ad63-392f-45da-a70e-6da67f79f521.png)
+![12](https://user-images.githubusercontent.com/41590940/203917165-77087f30-779c-45be-93c5-d9207f8cd0aa.png)
+![9](https://user-images.githubusercontent.com/41590940/203917174-72ed809b-0142-4055-85d4-e5ad5648c8db.png)
+
+![1](https://user-images.githubusercontent.com/41590940/203917146-677f7b2c-3c6f-4b4e-be01-7aea67d4d3f3.png)
+![11](https://user-images.githubusercontent.com/41590940/203917159-dac13b60-12f5-4001-a7e4-fd37c482f318.png)
+
 
 
 
